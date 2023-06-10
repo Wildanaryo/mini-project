@@ -1,0 +1,775 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: black;
+}
+
+* {
+  transition: all 0.3s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+  }
+
+.main-content {
+    background-color: #ffffff;
+  }
+
+.main-logo {
+    color: #ffffff;
+    width: 50px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.title-web {
+  display: flex;
+  align-items: center;
+
+}
+
+.title-web:hover {
+  text-decoration: none;
+  color: white;  
+}
+
+.title-description{
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 8px;
+  align-items: center;
+  flex-grow: 1;
+}
+
+textarea {
+  width: 100%;
+  margin-right: 8px;
+  padding: 12px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: white;
+  resize: none;
+  background-color: transparent;
+}
+
+textarea::placeholder {
+  color: white;
+}
+
+textarea:focus {
+  outline: none; /* Warna bayangan saat input aktif */
+}
+
+.tweet-button {
+  position: absolute;
+  right: 0px;
+  background-color: #1DA1F2;
+  color: white;
+  border-radius: 50px;
+  font-weight: 400;
+  border: 0;
+}
+
+.icon-tweet {
+  background-color: transparent;
+  border: 0;
+  color: white;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.size-logo {
+    font-size: 1.75rem;
+}
+
+.tab-button {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang dengan transparansi */
+  backdrop-filter: blur(3px); /* Efek buram menggunakan blur */
+  z-index: 999;
+}
+
+
+.button:hover {
+    background-color: #2a2626;
+    color: #ffffff
+}
+
+button.tab-home:hover {
+  text-decoration: none;
+  color: white;
+}
+  
+
+.pos-logo{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    border-radius: 50px;
+}
+
+.btn-navbar {
+    border: 0;
+    border-radius: 0;
+    height: 100%;
+    background-color: transparent;
+    color: black;
+}
+
+button.btn-navbar {
+  box-sizing: border-box;
+}
+
+  .btn-navbar {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+  }
+
+  .btn-navbar:hover {
+    color: #1DA1F2;
+  }
+
+  .btn-navbar:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1DA1F2;
+  }
+
+.c-white {
+    color: white;
+}
+
+.c-grey {
+  color: grey;
+}
+
+.c-blue {
+  color: #1DA1F2;
+}
+
+.bg-black {
+    background-color: #000000;
+}
+
+.main-content {
+  margin-top: 70px; /* Tinggi navbar, sesuaikan jika ada perubahan */
+}
+
+.col-blue {
+  color: #1D9BF0;
+}
+
+.col-sidebar {
+  color: #16181C ;
+}
+
+.col-grey {
+  color: #202327;
+}
+
+.col-hover {
+  color: #181818;
+}
+
+.pos-navbar {
+  position: sticky;
+  top: 1rem;
+  /* height: 100vh; */
+}
+
+.sticky-button {
+  position: sticky;
+  top: 37rem;
+}
+
+.button-tweet {
+  background-color: #1DA1F2;
+}
+
+.profile-picture {
+  display: inline-block;
+  width: 60px;
+  height: auto;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pos-ava {
+  position: sticky;
+  bottom: 1rem;
+  top: 57rem;
+}
+
+.pos-ava .profile-picture {
+  align-self: flex-end;
+  margin-bottom: 3px;
+}
+
+.circle-button {
+  display: flex;
+  align-items: left;
+  border: none;
+  padding: 10px 32.6px;
+  border-radius: 50px;
+  cursor: pointer;
+  padding-right: 8px;
+}
+
+.circle-button:hover {
+  background-color: #181818;
+}
+
+
+.circle-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.button-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.text-line1 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.text-line2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+}
+
+/* @media (max-width: 990px)  {
+  .main-logo.pl-3 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+
+  .btn.button.pos-logo {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+
+  .circle-button.mb-3.pos-ava.c-white.btn button.pos-logo.pl-2 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    left: -5px;    
+  }
+
+  .trending.bg-black.col-3.p-5 {
+    transition: none;
+    display: none;
+    position: absolute;
+  }
+
+  .col-3.pt-3 {
+    max-width: 14%;
+  }
+
+  .mainContent.col-6.p-0 {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn.button.pos-logo {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 0;
+  }  
+} */
+
+.home-header:focus {
+  outline: 0;
+}
+
+.search-coloumn {
+  max-width: 100%;
+  position: sticky;
+  top: 0px;
+  padding: 10px;
+  display: flex;
+  z-index: 999;
+  background-color: #000000;
+}
+
+.search-input {
+  border-radius: 25px;
+  background-color: #202327;
+  border-right: none;
+  z-index: 999;
+}
+
+.search-input:focus {
+  background-color: #202327; 
+  color: white;/* Mengubah latar belakang saat input aktif (focused) menjadi transparan */
+}
+
+.search-icon {
+  color: white;
+  border: 1px solid white;
+  border-left: none;
+  border-radius: 25px;
+  background-color: #202327;
+  z-index: 999;
+}
+
+.search-input::placeholder {
+  color: grey; 
+  opacity: 1;
+}
+
+.main-tweet:hover {
+  color: white;
+}
+
+#tweet::placeholder {
+  color: gray;
+}
+
+.more-button {
+  font-size: 24px;
+  border: 0.5px solid white;
+  border-radius: 10px;
+}
+
+.yellow.bi.bi-patch-check-fill {
+  color: orange;
+}
+
+.blue.bi.bi-patch-check-fill {
+  color: #1DA1F2;
+}
+
+.mr-2.font-weight-bold:hover {
+  text-decoration: underline;
+}
+
+.account-name:hover {
+  text-decoration: underline;
+}
+
+.card-body.card-description {
+  background-color: #000000;
+} 
+
+.bi {
+  transition: none;
+}
+
+.icon-tweet.reply.c-grey.mr-4:hover {
+  color: #1DA1F2;
+}
+
+.icon-tweet.retweet.c-grey.mr-4:hover {
+  color: green;
+}
+
+.icon-tweet.like.c-grey.mr-4:hover {
+  color: red;
+}
+
+.icon-tweet.view.c-grey.mr-4:hover {
+  color: #1DA1F2;
+}
+
+.icon-tweet.share.c-grey.mr-4:hover {
+  color: #1DA1F2;
+}
+
+.row-12.trending {
+  background-color: #16181C;
+  border-radius: 20px;
+  border: none;
+}
+
+.trending-container {
+  background-color: #16181C;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 16px;
+}
+
+.trending-container:hover {
+  background-color: #141414;
+}
+
+.trending-container:focus {
+  border: none
+}
+
+.list-trending {
+  justify-content: left;
+  display: flex;
+  margin: 0 0 0 17px;
+}
+
+/* PERCOBAAN */
+.tab-header {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+.list-tab {
+  font-size: 25px;
+  color: white;
+  border-radius: 50px;
+  transition: none;
+}
+
+.list-tab:hover {
+  background-color: #181818;
+  color: white;
+}
+
+.user-sidebar {
+  background-color: transparent;
+  color: white;
+  border: 0.3px solid white;
+  border-radius: 50px;
+  padding: 8px;
+}
+
+.user-sidebar:hover {
+  background-color: #181818 ;
+}
+
+.ghibah-button {
+  background-color: #1DA1F2;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-navbar {
+  height: 100vh;
+  position: sticky;
+  top: 0px;
+}
+
+@media (max-width: 1172px)  {
+  .title-tab, .user-name, .user-profile, .ghibah-button, .icon-header {
+    transition: all 0.3s ease;
+    display: none;
+  }
+
+  .main-navbar, .list-tab {
+    transition: all 0.3s ease;
+    display: grid;
+    place-content: start;
+    justify-content: center;
+  }
+
+  .user-sidebar {
+    transition: all 0.3s ease;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+
+  }
+}
+
+.user-name {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.user-profile {
+  font-size: 10px;
+  color: grey;
+}
+
+.user-photo {
+  width: 35px;
+  height: auto;
+}
+
+.main-trending {
+  width: 350px;
+}
+
+.main-content {
+  width: 598px;
+}
+
+.main-navbar {
+  width: 275px;
+}
+
+/* @media (max-width: 992px) {
+  .main-trending {
+      display: none;
+      position: absolute;
+  }
+  .main-page {
+    width: 100%;
+  }
+} */
+
+.follow {
+  background-color: #16181C;
+  color: white;
+  border-radius: 25px;
+  padding: 8px;
+}
+
+.follow-header {
+  margin-left: 17px;
+}
+
+/* /* .follow-button {
+  display: flex;
+  position: absolute;
+  right: 0px;
+} */
+/* 
+.container-fluid {
+  display: flex;
+  justify-content: center;
+} */
+/* .main-page {
+  width: 1444px;
+} */
+
+.title-tab {
+  font-size: 20px;
+}
+
+.mainContent {
+  width: 598px;
+}
+
+.main-trending {
+  width: 350px;
+}
+
+.list-follow {
+  padding-left: 17px;
+  padding-right: 12px;
+}
+
+.list-follow:hover {
+  background-color: #141414;
+}
+
+.follow {
+  background-color: #16181C;
+}
+
+.follow-button {
+  background-color: white;
+  color: black;
+  padding: 2px 4px 2px 4px;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+/* Style untuk modal */
+.modal {
+  display: none; /* Default hide modal */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4); /* Agar hitam pekat dengan transparansi 40% */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  color: #000000;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+button {
+  margin-left: 10px;
+}
+
+.text-footer {
+  min-width: fit-content;
+  font-size: 14px;
+}
+
+.button-back:hover {
+  background-color: #2a2626;
+  border-radius: 50%;
+}
+
+.img-user {
+  width: 150px;
+  border: 3px solid black;
+  height: auto;
+  margin-top: -75px;
+}
+
+.photo-user {
+  margin: 5px 5px 0 0;
+}
+
+.edit-profile {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 50px;
+  height: fit-content;
+}
+
+.tab-profile-button {
+  width: 100%;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.tab-profile-button:hover {
+  background-color: #2a2626;
+  color: white;
+}
+
+.tab-profile-button:focus {
+  border-bottom: 5px solid #1DA1F2;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 22px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.image-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slides{
+  width: 100%;
+  position: relative;
+}
+
+.slides .slide{
+  display: none;
+}
+
+.slides .slide img{
+  width: 100%;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slides .navigation{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slides .navigation .prev, .slides .navigation .next{
+  cursor: pointer;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: rgba(0,0,0,0.2);
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+.slides .navigation .prev:hover, .slides .navigation .next:hover{
+  background: rgba(0,0,0,1);
+}
+
+@keyframes fade {
+  from{opacity: 0.3}
+  to {opacity: 1}
+}
+
+@media (max-width: 992px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 18px;
+    padding: 13px;
+  }
+}
+
+@media (max-width: 768px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 12px;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 360px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 11px;
+    padding: 6px;
+  }
+}
+
+

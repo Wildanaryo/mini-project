@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="assets/letter-g.png" type="image/x-icon">
+    <title>Wildan A. Wicaksono (@wildanwicaksono)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-xl" style="
+    max-width: 1440px;
+    display: grid;
+    justify-content: center;">
+      <div class="main-page row d-flex justify-content-center m-0 c-white">
+        <!-- Start Navbar -->
+        <div class="main-navbar d-flex align-items-start flex-column col-2 p-3" style="z-index: 99;">
+          <button class="row-12 tab-header mb-5 d-flex align-items-center justify-content-left" onclick="window.location.href = 'main-page.html';">
+            <div class="icon-tab-header">
+              <img src="assets/letter-g.png" alt="logo ghibah.in">
+            </div>
+            <span class="title-tab-header font-weight-bold ml-2 d-none d-lg-block">
+              <h5 class="icon-header">Ghibah.in</h5>
+            </span>
+          </button>
+          <div class="row-12"></div>
+            <button class="list-tab row-12 mb-2 d-flex btn" onclick="window.location.href = 'main-page.html';">
+              <div class="icon-tab">
+                <i class="bi bi-house-door-fill"></i>
+              </div>
+              <div class="title-tab ml-3">Home</div>
+            </button>
+            <button class="list-tab row-12 mb-2 d-flex btn">
+              <div class="icon-tab">
+                <i class="bi bi-hash"></i>
+              </div>
+              <div class="title-tab ml-3">Explore</div>
+            </button>
+            <button class="list-tab row-12 mb-2 d-flex btn">
+              <div class="icon-tab">
+                <i class="bi bi-bell"></i>
+              </div>
+              <div class="title-tab ml-3">Notification</div>
+            </button>
+            <button class="list-tab row-12 mb-2 d-flex btn">
+              <div class="icon-tab">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="title-tab ml-3">Messages</div>
+            </button>
+            <button class="list-tab row-12 mb-2 d-flex btn">
+              <div class="icon-tab">
+                <i class="bi bi-card-list"></i>
+              </div>
+              <div class="title-tab ml-3">List</div>
+            </button>
+            <button class="list-tab row-12 mb-2 d-flex btn">
+              <div class="icon-tab">
+                <i class="bi bi-bookmark"></i>
+              </div>
+              <div class="title-tab ml-3">Bookmark</div>
+            </button>
+            <button class="list-tab row-12 mb-2 d-flex btn">
+              <div class="icon-tab">
+                <i class="bi bi-person"></i>
+              </div>
+              <div class="title-tab ml-3">Profile</div>
+            </button>
+            <button class="list-tab row-12 mb-2 d-flex btn">
+              <div class="icon-tab">
+                <i class="bi bi-three-dots"></i>
+              </div>
+              <div class="title-tab ml-3">More</div>
+            </button>
+            <button class="ghibah-button mt-5">Ghibah!</button>
+            <button id="logout-button" class="user-sidebar row-12 d-flex align-items-center mt-auto">
+              <img src="assets/Foto.jpg" alt="@wildanwicaksono" class="circle-image user-photo">
+              <span class="user-desc ml-2 text-left d-none d-lg-block">
+                <div class="user-name">Wildan A. Wicaksono</div>
+                <div class="user-profile">@wildanwicaksono</div>
+              </span>
+            </button>
+
+            <!-- Modal -->
+            <div id="logout-modal" class="modal">
+              <div class="modal-content">
+                <div class="logout-img">
+                  <img src="assets/letter-g.png" alt="logo Ghibah.in">
+                </div>
+                <div class="logout-text">
+                  <h2>Log out of Ghibah.in?</h2>
+                  <p class="c-grey">You can always log back in at any time.</p>
+                </div>
+                <div class="button-container">
+                  <button id="cancel-button" class="p-2">Cancel</button>
+                  <button id="confirm-button" class="p-2" onclick="window.location.href = 'login-page.html';">Logout</button>
+                </div>
+              </div>
+            </div>
+            <script>
+            const logoutBtn = document.getElementById('logout-button');
+            const modal = document.getElementById('logout-modal');
+            const cancelBtn = document.getElementById('cancel-button');
+            const confirmBtn = document.getElementById('confirm-button');
+            
+            logoutBtn.addEventListener('click', function() {
+              modal.style.display = "block"; // Show modal when button clicked
+            });
+            
+            cancelBtn.addEventListener('click', function() {
+              modal.style.display = "none"; // Hide modal when cancel button clicked
+            });
+            
+            confirmBtn.addEventListener('click', function() {
+              // Perform logout function here
+            });
+            </script>
+        </div>
+        <!-- End Navbar -->
+
+        <!-- Start Main Content -->
+        <div class="mainContent col-6 p-0 m-0 border border-light border-top-0">
+          <div class="container p-0">
+            <div class="row-12">
+          <!-- Start Button Content -->
+          <div class="tab-button d-flex align-items-center">
+            <i class="button-back c-white ml-2 p-2 bi bi-arrow-left" role="button" onclick="window.location.href = 'main-page.html';"></i>
+            <div class="tab-home row-12 p-3 fs-20 font-weight-bold c-white">
+              <h5 class="m-0">wildanwicaksono</h5>
+              <div class="c-grey" style="font-size: 15px;">27.5k Ghibah</div>
+            </div>
+          </div>
+          <!-- End Button Content -->
+
+          <!-- profile tweet -->
+          <img src="assets/header wildan.jpeg" alt="Header wildanwicaksono" style="width: 100%;">
+          <div class="photo-user d-flex justify-content-between mx-2">
+            <img src="assets/Foto.jpg" alt="Foto wildanwicaksono" class="circle-image img-user">
+            <div class="edit-profile">
+              <div>Edit Profile</div>
+            </div>
+          </div>
+          <div class="description-profile mx-3 pb-3">
+            <h5 class="name-profile1 m-0">wildanwicaksono</h5>
+            <div class="name-profile2 c-grey" style="font-size: 15px;">@wildanwicaksono</div>
+            <div class="bio-profile mt-3">
+              <p>an awesome kid from the lane <span class="c-blue">#COYS</span></p>
+            </div>
+            <div class="birth-profile d-flex">
+              <p class="mr-4"><span class="mr-2"><i class="bi bi-balloon"></i></span>Born June 19, 1994</p>
+              <p><span class="mr-2"><i class="bi bi-calendar-event"></i></span>Joined September 2009</p>
+            </div>
+            <div class="followers d-flex">
+              <p class="c-grey mr-4"><span class="font-weight-bold c-white mr-2">237</span>Following</p>
+              <p class="c-grey mr-4"><span class="font-weight-bold c-white mr-2">654</span>Followers</p>
+            </div>
+          </div>
+          <!-- Start Content Fill  -->
+          <div class="tab-profile d-flex justify-content-around border-bottom border-light">
+            <button class="tab-profile-button py-2 c-grey d-flex justify-content-center" role="button">Tweets</button>
+            <button class="tab-profile-button py-2 c-grey d-flex justify-content-center" role="button">Replies</button>
+            <button class="tab-profile-button py-2 c-grey d-flex justify-content-center" role="button">Media</button>
+            <button class="tab-profile-button py-2 c-grey d-flex justify-content-center" role="button">Likes</button>
+          </div>
+          <div class="container p-0">
+            <!-- Tweet pertama -->
+            <a href="#" class="tweet-header c-white" style="text-decoration: none;">
+              <div class="main-tweet row m-0 border-bottom p-2">
+                <div class="content1 d-flex flex-column align-items-end col-2 p-0">
+                  <div class="retweet mr-2"><i class="bi bi-arrow-repeat c-grey"></i></div>
+                  <div class="photo-tweet d-flex justify-content-center w-100"><img src="assets/Spurs.jpg" alt="Spurs" class="circle-image mr-0"></div>
+                </div>
+                <div class="align-items-center col-10 p-0">
+                  <div class="row-12 d-flex flex-column">
+                    <p class="retweet-by c-grey m-0">You Reghibahed</p>
+                    <div class="username m-0 p-0 d-flex">
+                      <div class="mr-2 font-weight-bold">Tottenham Hotspur <i class="yellow bi bi-patch-check-fill"></i></div>
+                      <div class="c-grey">@SpursOfficial - 35m</div>
+                    </div>
+                  </div>
+                  <div class="row-12 mr-2">
+                    <article>
+                      <p>Thank you for the memories, <span class="account-name c-blue">@LucasMoura27</span> 💙</p> 
+                      <p>We can confirm that Lucas Moura is to leave the Club at the end of the season following the conclusion of his contract.</p> 
+                      <p>
+                        <div class="card card-tweet" style="width: 100%;">
+                          <img src="assets/Lucas.jpeg" class="card-img-top" alt="LucasMoura27">
+                          <div class="card-body card-description p-2">
+                            <div class="card-text c-grey">tottenhamhotspur.com</div>
+                            <div class="card-text">Lucas Moura to depart the Club at the end of the season</div>
+                          </div>
+                        </div>
+                      </p>
+                    </article>   
+                  </div>
+                  <div class="row-12 d-flex justify-content-between">
+                    <button class="icon-tweet reply c-grey"><i class="bi bi-chat-left mr-2" title="Reply"></i>27,5K</button>
+                    <button class="icon-tweet retweet c-grey"><i class="bi bi-arrow-repeat mr-2" title="Retweet"></i>15K</button>
+                    <button class="icon-tweet like c-grey"><i class="bi bi-heart mr-2" title="Like"></i>108,K</button>
+                    <button class="icon-tweet view c-grey"><i class="bi bi-graph-up mr-2" title="Views"></i>350K</button>
+                    <button class="icon-tweet share c-grey d-none d-lg-block"><i class="bi bi-share mr-2" title="Share"></i></button>
+                  </div>
+                </div>
+              </div> 
+            </a>
+
+            <!-- tweet kedua -->
+            <a href="#" class="tweet-header c-white" style="text-decoration: none;">
+              <div class="main-tweet row m-0 border-bottom p-2">
+                <div class="content1 d-flex flex-column align-items-end col-2 p-0">
+                  <div class="retweet mr-2"><i class="bi bi-arrow-repeat c-grey"></i></div>
+                  <div class="photo-tweet d-flex justify-content-center w-100"><img src="assets/lakers.jpg" alt="Lakers" class="circle-image mr-0"></div>
+                </div>
+                <div class="align-items-center col-10 p-0">
+                  <div class="row-12 d-flex flex-column">
+                    <p class="retweet-by c-grey m-0">You Reghibahed</p>
+                    <div class="username m-0 p-0 d-flex">
+                      <div class="mr-2 font-weight-bold">Los Angeles Lakers <i class="yellow bi bi-patch-check-fill"></i></div>
+                      <div class="c-grey">@Lakers - 2h</div>
+                    </div>
+                  </div>
+                  <div class="row-12 mr-2">
+                    <article>
+                      <p>Game Two.</p> 
+                      <p>
+                        🕖 5:30 PM<br>
+                        📺 ESPN, Pregame & Postgame on <span class="account-name c-blue">@SpectrumSN</span><br>
+                        📻 ESPN LA 710/KWKW (S)</p>
+                      <p>
+                        <div class="card card-tweet" style="width: 100%;">
+                          <img src="assets/Lebron.jpeg" class="card-img-top" alt="Lebron James">
+                          <div class="card-body card-description p-2">
+                            <div class="card-text c-grey">nba.com</div>
+                            <div class="card-text">3 Things to Know</div>
+                          </div>
+                        </div>
+                      </p>
+                    </article>   
+                  </div>
+                  <div class="row-12">
+                    <div class="d-flex justify-content-between">
+                      <button class="icon-tweet reply c-grey"><i class="bi bi-chat-left mr-2" title="Reply"></i>57</button>
+                      <button class="icon-tweet retweet c-grey"><i class="bi bi-arrow-repeat mr-2" title="Retweet"></i>215</button>
+                      <button class="icon-tweet like c-grey"><i class="bi bi-heart mr-2" title="Like"></i>1,309</button>
+                      <button class="icon-tweet view c-grey"><i class="bi bi-graph-up mr-2" title="Views"></i>50.3K</button>
+                      <button class="icon-tweet share c-grey d-none d-lg-block"><i class="bi bi-share mr-2" title="Share"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </a>
+
+            <!-- Tweet ketiga -->
+            <a href="#" class="tweet-header c-white" style="text-decoration: none;">
+              <div class="main-tweet row m-0 border-bottom p-2">
+                <div class="content1 d-flex flex-column align-items-end col-2 p-0">
+                  <div class="retweet mr-2"><i class="bi bi-arrow-repeat c-grey"></i></div>
+                  <div class="photo-tweet d-flex justify-content-center w-100"><img src="assets/bts.jpg" alt="BTS" class="circle-image mr-0"></div>
+                </div>
+                <div class="align-items-center col-10 p-0">
+                  <div class="row-12 d-flex flex-column">
+                    <p class="retweet-by c-grey m-0">You Reghibahed</p>
+                    <div class="username m-0 p-0 d-flex">
+                      <div class="mr-2 font-weight-bold">Futsal Bintang Timur <i class="blue bi bi-patch-check-fill"></i></div>
+                      <div class="c-grey">@btsfutsal - 6h</div>
+                    </div>
+                  </div>
+                  <div class="row-12 mr-2">
+                    <article>
+                      <p>TSale BTS 2018, home dan away. <br>
+                        Untuk pemesanan bisa langsung WA 0812-4920-1316 <br>
+                        Maturnuwun lur</p>  
+                      <p>
+                        <div class="card card-tweet" style="width: 100%;">
+                          <img src="assets/jersey bts.jpeg" class="card-img-top" alt="Jersey BTS">
+                        </div>
+                      </p>
+                    </article>   
+                  </div>
+                  <div class="row-12">
+                    <div class="d-flex justify-content-between">
+                      <button class="icon-tweet reply c-grey"><i class="bi bi-chat-left mr-2" title="Reply"></i>12</button>
+                      <button class="icon-tweet retweet c-grey"><i class="bi bi-arrow-repeat mr-2" title="Retweet"></i>34</button>
+                      <button class="icon-tweet like c-grey"><i class="bi bi-heart mr-2" title="Like"></i>10</button>
+                      <button class="icon-tweet view c-grey"><i class="bi bi-graph-up mr-2" title="Views"></i>350</button>
+                      <button class="icon-tweet share c-grey d-none d-lg-block"><i class="bi bi-share mr-2" title="Share"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </a>
+
+            <!-- Tweet keempat -->
+            <a href="#" class="tweet-header c-white" style="text-decoration: none;">
+              <div class="main-tweet row m-0 border-bottom p-2">
+                <div class="content1 d-flex flex-column align-items-end col-2 p-0">
+                  <div class="retweet mr-2"><i class="bi bi-arrow-repeat c-grey"></i></div>
+                  <div class="photo-tweet d-flex justify-content-center w-100"><img src="assets/ukm.jpg" alt="UKM Sepakbola ITS" class="circle-image mr-0"></div>
+                </div>
+                <div class="align-items-center col-10 p-0">
+                  <div class="row-12 d-flex flex-column">
+                    <p class="retweet-by c-grey m-0">You Reghibahed</p>
+                    <div class="username m-0 p-0 d-flex">
+                      <div class="mr-2 font-weight-bold">UKM SEPAKBOLA ITS <i class="blue bi bi-patch-check-fill"></i></div>
+                      <div class="c-grey">@UKMSepakbolaITS - 12h</div>
+                    </div>
+                  </div>
+                  <div class="row-12 mr-2">
+                    <article>
+                      <p>[HARI PENDIDIKAN NASIONAL]</p>
+                      <p>Selamat Hari Pendidikan Nasional 2023.</p>
+                      <p class="c-blue">
+                        #KabinetAksiNyata
+                        #UKMSepakbolaITS <br>
+                        #JayalahSepakbolaITS <br>
+                        #ITSSurabaya</p>
+                      <p>
+                        <img src="assets/foto ukm.jpeg" class="card-img-top" alt="Hardiknas">
+                      </p>
+                    </article>   
+                  </div>
+                  <div class="row-12">
+                    <div class="d-flex justify-content-between">
+                      <button class="icon-tweet reply c-grey"><i class="bi bi-chat-left mr-2" title="Reply"></i>10</button>
+                      <button class="icon-tweet retweet c-grey"><i class="bi bi-arrow-repeat mr-2" title="Retweet"></i>37</button>
+                      <button class="icon-tweet like c-grey"><i class="bi bi-heart mr-2" title="Like"></i>356</button>
+                      <button class="icon-tweet view c-grey"><i class="bi bi-graph-up mr-2" title="Views"></i>35.7</button>
+                      <button class="icon-tweet share c-grey d-none d-lg-block"><i class="bi bi-share mr-2" title="Share"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </a>
+
+            <!-- tweet kelima -->
+            <a href="#" class="tweet-header c-white" style="text-decoration: none;">
+              <div class="main-tweet row m-0 border-bottom p-2">
+                <div class="content1 d-flex flex-column align-items-end col-2 p-0">
+                  <div class="retweet mr-2"><i class="bi bi-arrow-repeat c-grey"></i></div>
+                  <div class="photo-tweet d-flex justify-content-center w-100"><img src="assets/pbsi.jpg" alt="PBSI" class="circle-image mr-0"></div>
+                </div>
+                <div class="align-items-center col-10 p-0">
+                  <div class="row-12 d-flex flex-column">
+                    <p class="retweet-by c-grey m-0">You Reghibahed</p>
+                    <div class="username m-0 p-0 d-flex">
+                      <div class="mr-2 font-weight-bold">BADMINTON INDONESIA <i class="blue bi bi-patch-check-fill"></i></div>
+                      <div class="c-grey">@INABadminton - 20h</div>
+                    </div>
+                  </div>
+                  <div class="row-12 mr-2">
+                    <article>
+                      <p>Indonesia akan bertemu China di babak perempatfinal Piala Sudirman 2023. Berikut hasil undian secara lengkap.</p> 
+                      <p>Good luck! 💪🏻</p> 
+                      <p class="c-blue">#SudirmanCup2023</p>
+                      <p>
+                        <div class="card card-tweet" style="width: 100%;">
+                          <img src="assets/bagan pbsi.jpeg" class="card-img-top" alt="Sudirman Cup 2023">
+                        </div>
+                      </p>
+                    </article>   
+                  </div>
+                  <div class="row-12">
+                    <div class="d-flex justify-content-between">
+                      <button class="icon-tweet reply c-grey"><i class="bi bi-chat-left mr-2" title="Reply"></i>12K</button>
+                      <button class="icon-tweet retweet c-grey"><i class="bi bi-arrow-repeat mr-2" title="Retweet"></i>18K</button>
+                      <button class="icon-tweet like c-grey"><i class="bi bi-heart mr-2" title="Like"></i>103.6K</button>
+                      <button class="icon-tweet view c-grey"><i class="bi bi-graph-up mr-2" title="Views"></i>320K</button>
+                      <button class="icon-tweet share c-grey d-none d-lg-block"><i class="bi bi-share mr-2" title="Share"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </a>
+          </div>
+          <!-- End Content Fill -->
+            </div>
+          </div>
+
+        </div>
+        <!-- End Main Content -->
+
+        <!-- Start Trending -->
+        <div class="main-trending col-4 bg-black d-none d-lg-block p-0 px-3">
+          <!-- kolom search -->
+            <div class="row-12 search-coloumn ">
+              <div class="input-group">
+                <input type="text" class="form-control search-input" placeholder="Search...">
+                <div class="input-group-append">
+                  <span class="input-group-text search-icon" id="basic-addon2">
+                    <i class="bi bi-search"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- kolom who to follow -->
+            <div class="row-12 follow mb-2 px-0 py-3">
+              <div class="image-container">
+                <img src="assets/image1.jpeg" alt="Media 1" role="button">
+                <img src="assets/image2.jpeg" alt="Media 2" role="button">
+                <img src="assets/image3.jpeg" alt="Media 3" role="button">
+                <img src="assets/image4.jpeg" alt="Media 4" role="button">
+                <img src="assets/image5.jpeg" alt="Media 5" role="button">
+                <img src="assets/image6.jpeg" alt="Media 6" role="button">
+              </div>
+            </div>
+
+            <!-- kolom who to follow -->
+            <div class="row-12 follow mb-2 px-0 py-3">
+              <div class="follow-header mb-2 py-2">
+                <h4 class="header-text m-0">You Might Like</h4>
+              </div>
+              <div role="button" class="list-follow d-flex py-2">
+                <div><img src="assets/dibimbing.jpg" alt="bwfscore" class="circle-image mr-1"></div>
+                <div class="title-follow w-100 d-flex justify-content-between align-items-center">
+                  <div class="user-follow">
+                    <p class="user-follow m-0">Dibimbing.id</p> 
+                    <p class="name-follow m-0 c-grey">@DibimbingId</p>
+                  </div>
+                  <div class="follow-button">Follow</div>
+                </div>
+              </div>
+              <div role="button" class="list-follow d-flex py-2">
+                <div><img src="assets/bwfscore.jpeg" alt="bwfscore" class="circle-image mr-1"></div>
+                <div class="title-follow w-100 d-flex justify-content-between align-items-center">
+                  <div class="user-follow">
+                    <p class="user-follow m-0">BWF Score</p> 
+                    <p class="name-follow m-0 c-grey">@BWFScore</p>
+                  </div>
+                  <div class="follow-button">Follow</div>
+                </div>
+              </div>
+              <div role="button" class="list-follow d-flex py-2">
+                <div><img src="assets/coddingfess.jpg" alt="bwfscore" class="circle-image mr-1"></div>
+                <div class="title-follow w-100 d-flex justify-content-between align-items-center">
+                  <div class="user-follow">
+                    <p class="user-follow m-0">CODINGFESS 😺</p> 
+                    <p class="name-follow m-0 c-grey">@codingfess</p>
+                  </div>
+                  <div class="follow-button">Follow</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- kolom trending -->
+            <div class="row-12 py-3 trending mb-2 ">
+              <div class="row m-0 d-flex align-items-center header-trending">
+                <h4 class="mx-3">Indonesia Trends</h4>
+              </div>
+              <button class="trending-container row m-0 my-3 d-lg-block w-100">
+                <p class="list-trending c-grey">1. Trending</p>
+                <p class="list-trending c-white font-weight-bold">#AyoBelajarWebDev</p>
+                <p class="list-trending c-grey">457K Tweets</p>
+              </button>
+              <button class="trending-container row m-0 py-2 d-lg-block w-100">
+                <p class="list-trending c-grey">2. Trending</p>
+                <p class="list-trending c-white font-weight-bold">#SiapDibimbing</p>
+                <p class="list-trending c-grey">999K Tweets</p>
+              </button>
+              <button class="trending-container row m-0 py-2 d-lg-block w-100">
+                <p class="list-trending c-grey">3. Trending</p>
+                <p class="list-trending c-white font-weight-bold">#Dibimbing</p>
+                <p class="list-trending c-grey">432K Tweets</p>
+              </button>
+              <button class="trending-container row m-0 py-2 d-lg-block w-100">
+                <p class="list-trending c-grey">4. Trending</p>
+                <p class="list-trending c-white font-weight-bold">#FrontEnd</p>
+                <p class="list-trending c-grey">123K Tweets</p>
+              </button>
+              <button class="trending-container row m-0 py-2 d-lg-block w-100">
+                <p class="list-trending c-grey">5. Trending</p>
+                <p class="list-trending c-white font-weight-bold">#BersamaDibimbing</p>
+                <p class="list-trending c-grey">327K Tweets</p>
+              </button>
+              <button class="trending-container row m-0 py-2 d-lg-block w-100">
+                <p class="list-trending c-grey">6. Trending</p>
+                <p class="list-trending c-white font-weight-bold">#AyoKitaBisa</p>
+                <p class="list-trending c-grey">37K Tweets</p>
+              </button>
+              <button class="trending-container row m-0 py-2 d-lg-block w-100">
+                <p class="list-trending c-grey">7. Trending</p>
+                <p class="list-trending c-white font-weight-bold">#BelajarHTML</p>
+                <p class="list-trending c-grey">157K Tweets</p>
+              </button>
+              <button class="trending-container row m-0 py-2 d-lg-block w-100">
+                <p class="list-trending c-grey">8. Trending</p>
+                <p class="list-trending c-white font-weight-bold">#BelajarCSS</p>
+                <p class="list-trending c-grey">87K Tweets</p>
+              </button>
+              <button class="trending-container row m-0 py-2 d-lg-block w-100">
+                <p class="list-trending c-grey">9. Trending</p>
+                <p class="list-trending c-white font-weight-bold">#BelajarBootstrap5</p>
+                <p class="list-trending c-grey">37K Tweets</p>
+              </button>
+              <button class="trending-container row m-0 py-2 d-lg-block w-100">
+                <p class="list-trending c-grey">10. Trending</p>
+                <p class="list-trending c-white font-weight-bold">#AyoBelajarLagi</p>
+                <p class="list-trending c-grey">45K Tweets</p>
+              </button>
+            </div>
+
+            <!-- kolom ads -->
+            <div class="row-12 ads-coloumn mb-2">
+              <div class="col">
+                <div class="card">
+                  <img src="assets/ads hosting.png" class="card-img-top" alt="Ads Hosting">
+                  <div class="card-body card-description p-2">
+                    <h5 class="card-title">Hosting Murah</h5>
+                    <p class="card-text">Dapatkan potongan hari ini!</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row-12 p-2 footer c-grey d-flex flex-wrap justify-content-between">
+              <p class="text-footer m-0">Terms of Service</p>
+              <p class="text-footer m-0">Privacy Policy</p> 
+              <p class="text-footer m-0">Cookie Policy</p> 
+              <p class="text-footer m-0">Accessibility</p> 
+              <p class="text-footer m-0">Ads info</p> 
+              <p class="text-footer m-0">More</p> 
+              <p class="text-footer m-0">© 2023 X Corp.</p>       
+            </div>
+            <!-- End Trending -->
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
